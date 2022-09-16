@@ -63,8 +63,7 @@ def synch_endpoint():
         if field not in data:
             raise Exception("There's a missing field '{0}' in request".format(field))
     wallet_obj = WalletController(data['userid'])
-    what = wallet_obj.synch_one_user_id()
-    print(what)
+    wallet_obj.synch_one_user_id()
     return ('', 204)
 
 if __name__ == '__main__':
